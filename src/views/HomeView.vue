@@ -1,10 +1,16 @@
 <script>
+import HomeComponentStudentCard from './../components/HomeComponentStudentCard.vue'
+
 export default {
-  name: 'HomeView'
+  name: 'HomeView',
+  components: {
+    HomeComponentStudentCard
+  },
 }
 
 </script>
 
 <template>
-  <h2>This Home view page</h2>
+<h1 style="text-align: center">This is Home page</h1>
+  <HomeComponentStudentCard></HomeComponentStudentCard>
 </template>
