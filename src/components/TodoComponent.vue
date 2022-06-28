@@ -1,14 +1,14 @@
 <template>
-  <h2>This is todo components</h2>
-  <input type="text" placeholder="Enter item" v-model="bookName" />
-  <button @click="addBook">Add</button>
-  <p>{{ this.$store.state.count }}</p>
-  <p>{{ bookName }}</p>
-  <ul>
-    <li v-for="(book,index) in booklist" :key="index">
-      {{ book }} <button @click="removeBook(index)">Del</button>
-    </li>
-  </ul>
+    <h2>This is todo components</h2>
+    <input type="text" placeholder="Enter item" v-model="bookName" />
+    <button @click="addBook">Add</button>
+    <p>{{ this.$store.state.count }}</p>
+    <p>{{ bookName }}</p>
+    <ul>
+      <li v-for="(book, index) in booklist" :key="index">
+        {{ book }} <button @click="removeBook(index)">Del</button>
+      </li>
+    </ul>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
     },
 
     removeBook(index) {
-      this.$store.dispatch("removeBook", index)
+      this.$store.dispatch("removeBook", index);
     },
   },
 
