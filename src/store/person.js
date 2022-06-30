@@ -2,19 +2,11 @@ import { createApp } from "vue";
 import { createStore } from "vuex";
 
 // Create a new store instance.
-export const store = createStore({
+export const person = createStore({
     state() {
         return {
-            booklist: ["Muhib", "Jakir", "Shifa", "Tanvir"],
+            count: 500,
         };
-    },
-    mutations: {
-        
-
-
-    },
-    actions: {
-
     },
 });
 

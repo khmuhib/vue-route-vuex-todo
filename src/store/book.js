@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import { createStore } from "vuex";
 
 // Create a new store instance.
-export const store = createStore({
+export const book = createStore({
     state() {
         return {
             count: 60,
@@ -40,4 +40,4 @@ export const store = createStore({
     },
 });
 
-//export { store };
+// export { store };

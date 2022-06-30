@@ -1,24 +1,8 @@
 <script>
+import TestComponent from '../components/TestComponent.vue';
 export default {
-  name: 'AboutView',
-
-  computed: {
-    bookList() {
-      return this.$store.state.booklist;
-    },
-
-    methods: {
-      addBook() {
-        //this.$store.dispatch("increment");
-        this.$store.dispatch("addBook", this.bookName);
-        console.log('dsadsa')
-      },
-
-      removeBook(index) {
-        this.$store.dispatch("removeBook", index);
-      },
-    },
-    },
+    name: "AboutView",
+    components: { TestComponent }
 }
 </script>
 
@@ -26,18 +10,8 @@ export default {
 <template>
   <div class="">
     <h2>This is an about view page</h2>
+    <TestComponent></TestComponent>
 
-    <div>
-      <input type="text" v-model="bookName" placeholder="Enter Book Name"> <button @click="addBook" >Add Book</button>
-    </div>
-
-    <ul>
-      <li v-for="(book,index) in bookList" :key="index">
-        {{bookList[index]}}
-      </li>
-
-    
-    </ul>
   </div>
 </template>
 
